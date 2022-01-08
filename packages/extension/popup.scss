@@ -1,0 +1,100 @@
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px !important;
+  margin: 0;
+  left: 0;
+
+  .popup-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px; //300px
+    // height: 900px;
+    .popup-title-container {
+      //border: 1px solid rgb(234, 248, 103);
+      height: 55px;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #eadec4;
+
+      .popup-title-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        height: 100%;
+        font-weight: 400;
+
+        #popup-title-pashoot {
+          height: 20px;
+        }
+
+        #popup-title-email {
+          height: 15px;
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .popup-body-container {
+      //border: 1px solid rgb(13, 10, 191);
+      height: 150px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      .popup-body-screen-capture {
+        //border: 1px solid rgba(99, 0, 104, 0.212);
+        // height: 130px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        img {
+          cursor: pointer;
+        }
+      }
+
+      .popup-body-screen-record {
+        //border: 1px solid rgb(3, 51, 1);
+        // height: 0px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        img {
+          cursor: pointer;
+        }
+      }
+
+      .popup-pashoot-recording-stats {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        color: red;
+        font-size: 0.8rem;
+        margin-top: -20px;
+        opacity: 0;
+        background-color: rgb(253, 171, 171);
+
+        #popup-pashoot-recording-timer {
+          margin-left: -40px;
+        }
+      }
+    }
+
+    .popup-button-container {
+      //border: 1px solid rgb(102, 0, 73);
+      height: 80px;
+      width: 100%;
+    }
+  }
+}

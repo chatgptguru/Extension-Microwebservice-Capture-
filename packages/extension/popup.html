@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pashoot - Popup</title>
+    <link rel="stylesheet" href="popup.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/libs/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/font-awesome/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="popup-box">
+      <div class="popup-title-container row">
+        <div id="nav-title" class="popup-title-title title-full-width">
+          <div id="popup-title-disbug">
+            <a href="https://pashoot.re-invented.xyz/" target="_blank">
+              <img
+                class="img-responsive"
+                src="assets/disbug_logo.svg"
+                alt="Disbug company logo"
+              />
+            </a>
+          </div>
+        </div>
+        <div id="popup-title-logout" class="hide">
+          <button type="submit" id="logout" class="btn btn-sm btn-custom">
+            Log out
+          </button>
+          <small class="small-text">you have signed in</small>
+        </div>
+        <div class="popup-title-arrow">
+          <img src="assets/arrow.svg" alt="arrow image" />
+        </div>
+      </div>
+      <div id="popup-body-auth-user">
+        <div class="container">
+          <div class="row pt-2 body-container">
+            <h1 id="popup-user-name" class="px-3"></h1>
+            <ul class="nav nav-tabs options-container" id="options-tab">
+              <li class="option-list">
+                <a
+                  href="#screenshot-container"
+                  data-toggle="tab"
+                  class="option-button active"
+                >
+                  <span class="btn-icon">
+                    <svg
+                      width="24"
+                      height="20"
+                      viewBox="0 0 24 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M24 5.69123C24 9.48573 24 13.2802 24 17.0747C23.9809 17.1608 23.9618 17.2372 23.9331 17.3232C23.589 18.6422 22.4612 19.5216 21.1039 19.5216C15.0346 19.5216 8.95579 19.5216 2.8865 19.5216C1.27121 19.5216 0 18.2408 0 16.616C0 13.1273 0 9.63866 0 6.15001C0 6.00664 0 5.86327 0.0286738 5.72946C0.286738 4.22886 1.45281 3.24439 2.97252 3.24439C3.9761 3.24439 4.98925 3.24439 5.99283 3.24439C6.3178 3.24439 6.3178 3.24439 6.33692 2.92898C6.34648 2.73782 6.36559 2.5371 6.40382 2.34594C6.69056 0.960042 7.85663 0.0138059 9.26165 0.00424798C11.0681 -0.00530997 12.865 0.00424798 14.6714 0.00424798C16.3728 0.00424798 17.6153 1.20855 17.6822 2.90986C17.6918 3.23483 17.6918 3.24439 18.0358 3.24439C19.049 3.24439 20.0621 3.24439 21.0848 3.24439C21.5245 3.24439 21.9546 3.33041 22.356 3.52157C23.264 3.96124 23.7993 4.70676 24 5.69123ZM12.0143 5.65299C9.0227 5.65299 6.59498 8.08071 6.59498 11.0628C6.59498 14.0449 8.98447 16.4726 11.9952 16.4821C15.006 16.4917 17.4146 14.0831 17.4241 11.0628C17.4337 8.08071 14.9964 5.65299 12.0143 5.65299Z"
+                      />
+                      <path
+                        d="M12.0332 8.15717C13.6198 8.16672 14.9388 9.48572 14.9292 11.0819C14.9197 12.6685 13.5816 13.9971 12.0045 13.9875C10.4083 13.9684 9.09888 12.659 9.09888 11.0723C9.09888 9.45704 10.4179 8.15717 12.0332 8.15717Z"
+                      />
+                    </svg>
+                    Screenshot
+                  </span>
+                </a>
+              </li>
+              <li class="option-list">
+                <a
+                  href="#record-container"
+                  data-toggle="tab"
+                  class="option-button"
+                  id="record-tab-button"
+                >
+                  <span class="btn-icon">
+                    <svg
+                      width="24"
+                      height="20"
+                      viewBox="0 0 24 15"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 2.21109C0.166558 1.48079 0.531704 0.885029 1.1595 0.462228C1.60792 0.161143 2.10119 0.0073971 2.6393 0.0073971C6.27795 0.000991023 9.9102 -0.00541505 13.5488 0.0073971C15.0799 0.0138032 16.2202 1.18611 16.2202 2.71076C16.2266 5.61912 16.2266 8.53388 16.2202 11.4422C16.2202 12.9733 15.0543 14.152 13.5232 14.1584C9.90379 14.1648 6.28436 14.1648 2.65852 14.1584C1.40293 14.1584 0.371552 13.3448 0.0512486 12.1341C0.0320304 12.0764 0.0192182 12.0124 0 11.9547C0 8.70685 0 5.45897 0 2.21109Z"
+                      />
+                      <path
+                        d="M23.9973 7.06689C23.9973 8.39295 23.9973 9.71901 23.9973 11.0451C23.9973 12.3455 22.7481 13.1142 21.6078 12.4864C20.2689 11.7497 18.9493 10.9746 17.6232 10.2123C17.5079 10.1482 17.4631 10.0585 17.4631 9.93041C17.4631 8.0214 17.4631 6.10598 17.4631 4.19697C17.4631 4.06244 17.5207 3.98557 17.636 3.92151C18.9685 3.15918 20.2881 2.37124 21.6334 1.62813C22.7288 1.01956 23.9908 1.79469 23.9973 3.04388C24.0037 4.38275 23.9973 5.72802 23.9973 7.06689Z"
+                      />
+                    </svg>
+                    Screen Record
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="screenshot-container">
+              <button type="button" class="btn btn-action" id="screenshot">
+                <img
+                  src="./assets/camera-white.svg"
+                  class="icon-btn"
+                  alt="camera icon"
+                />
+                Take Screenshot
+              </button>
+              <div class="screenshot-body-background">
+                <img
+                  src="/assets/screenshot-outline.svg"
+                  alt="screenshot body texture"
+                  class="img-responsive"
+                />
+              </div>
+            </div>
+            <div class="tab-pane fade" id="record-container">
+              <button type="button" class="btn btn-action" id="record">
+                <i class="fa fa-stop-circle icon-btn fa-lg mr-2 disabled"></i
+                ><span id="record-text">Loading..</span>
+              </button>
+              <!-- <p id="record-time" class="time-display record-options">00:00</p> -->
+              <div class="setting-container record-options">
+                <h2 class="setting-title"><strong>Settings</strong></h2>
+                <div class="record-options-container">
+                  <label for="mic" class="setting-label">
+                    <input type="checkbox" value="mic-on" id="mic" />
+                    Mic
+                  </label>
+                  <select id="mic-select" class="custom-select">
+                    <option selected="">Mic Disabled</option>
+                  </select>
+                </div>
+                <div class="record-options-container">
+                  <label for="camera" class="setting-label">
+                    <input
+                      type="checkbox"
+                      class="custom-checkbox"
+                      value="camera-on"
+                      id="camera"
+                    />
+                    Camera
+                  </label>
+                  <select id="camera-select" class="custom-select">
+                    <option selected="">Camera Disabled</option>
+                  </select>
+                </div>
+                <div class="space-options" id="space-toggle">
+                  <input
+                    type="radio"
+                    class="custom-radio"
+                    name="record-space"
+                    id="current-tab"
+                    value="tab-only"
+                  />
+                  <label for="current-tab">
+                    <svg
+                      width="21"
+                      height="21"
+                      viewBox="0 0 21 21"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="svg-btn"
+                    >
+                      <rect
+                        x="0.965118"
+                        y="1.47025"
+                        width="18.3281"
+                        height="18.5"
+                        rx="1.25"
+                        stroke="inherit"
+                        stroke-width="1.5"
+                        fill="#FFFFFF"
+                      />
+                      <path
+                        d="M0.215118 2.72024C0.215118 1.61567 1.11055 0.720245 2.21512 0.720245H18.0433C19.1478 0.720245 20.0433 1.61568 20.0433 2.72025V6.47521H0.215118V2.72024Z"
+                        fill="inherit"
+                      />
+                      <ellipse
+                        cx="2.9092"
+                        cy="3.6572"
+                        rx="0.944662"
+                        ry="1.06639"
+                        fill="#FFFAF3"
+                      />
+                      <ellipse
+                        cx="5.39321"
+                        cy="3.6572"
+                        rx="0.944662"
+                        ry="1.06639"
+                        fill="#FFFAF3"
+                      />
+                    </svg>
+                    Current tab
+                  </label>
+                  <input
+                    type="radio"
+                    class="custom-radio"
+                    name="record-space"
+                    value="desktop"
+                    id="entire-screen"
+                  />
+                  <label for="entire-screen">
+                    <svg
+                      width="20"
+                      height="21"
+                      viewBox="0 0 20 21"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="svg-btn"
+                    >
+                      <rect
+                        x="19.1881"
+                        y="15.9334"
+                        width="18.328"
+                        height="14.4631"
+                        rx="1.25"
+                        transform="rotate(-180 19.1881 15.9334)"
+                        stroke="inherit"
+                        stroke-width="1.5"
+                        fill="#FFFFFF"
+                      />
+                      <path
+                        d="M19.9386 14.6834C19.9386 15.788 19.0431 16.6834 17.9386 16.6834L2.11052 16.6834C1.00595 16.6834 0.110523 15.788 0.110523 14.6834L0.110523 14.0639L19.9386 14.0639L19.9386 14.6834Z"
+                        fill="inherit"
+                      />
+                      <path
+                        d="M7.76205 15.9972H13.1066V18.6168H7.76205V15.9972Z"
+                        fill="inherit"
+                      />
+                      <path
+                        d="M5.22128 20.3354C5.22128 19.3862 5.99074 18.6168 6.93992 18.6168H13.9284C14.8775 18.6168 15.647 19.3862 15.647 20.3354V20.7203H5.22128V20.3354Z"
+                        fill="inherit"
+                      />
+                      <ellipse
+                        cx="10.4342"
+                        cy="15.3736"
+                        rx="0.62467"
+                        ry="0.705166"
+                        transform="rotate(-180 10.4342 15.3736)"
+                        fill="#FFFAF3"
+                      />
+                    </svg>
+                    Entire screen
+                  </label>
+                </div>
+                <!-- <label for="set-default" class="default-set">
+                  <input type="checkbox" name="default" id="set-default" />
+                  Set as default
+                </label> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-body-container" id="popup-body-anonymous-user">
+        <div class="container">
+          <a
+            href="https://disbug.io/login"
+            target="_blank"
+            class="btn btn-block btn-custom btn-login"
+            >Log in</a
+          >
+        </div>
+        <div class="container">
+          <p class="signup-container">
+            Or
+            <a href="https://disbug.io/signup/" target="_blank" class="sign-up"
+              >Sign up for free</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/libs/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap.min.js"></script>
+    <script src="server_url.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

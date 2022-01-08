@@ -1,0 +1,124 @@
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px !important;
+  margin: 0;
+  left: 0;
+}
+
+#nav-bar {
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  height: 65px;
+}
+
+#nav-bar .left-heading {
+  display: inline-block;
+  padding-left: 20px;
+  height: 65px;
+  line-height: 65px;
+}
+
+#nav-bar .left-heading .heading {
+  display: inline-block;
+}
+
+#nav-bar .left-heading .hed1 {
+  font-size: 20px;
+}
+
+#nav-bar .left-heading .hed2, #nav-bar .left-heading .hed3 {
+  font-size: 16px;
+  padding-left: 30px;
+}
+
+#nav-bar .right-heading {
+  display: inline-block;
+  float: right;
+  padding-right: 20px;
+  height: 50px;
+  line-height: 65px;
+  font-size: 16px;
+}
+
+#bug-details {
+  height: 35rem;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#bug-details .left-session {
+  min-height: 35rem;
+}
+
+#bug-details .left-session .img-footer {
+  padding: 20px;
+}
+
+#bug-details .left-session .img-footer .buttonClass {
+  background-color: black;
+  color: white;
+}
+
+#bug-details .left-session .bg-media-image-container {
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 50%;
+  min-width: 50%;
+  display: block;
+}
+
+#bug-details .left-session .bg-media-image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 50%;
+  min-width: 50%;
+}
+
+#bug-details .left-session .bg-media-video-elem {
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 50%;
+  min-width: 50%;
+  display: block;
+}
+
+#bug-details .left-session .bg-media-video-elem video {
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 50%;
+  min-width: 50%;
+}
+
+#bug-details .right-session input, #bug-details .right-session textarea {
+  width: 80%;
+}
+
+.issue-form {
+  padding-left: 5px;
+  overflow-y: auto;
+}
+
+#baseLayer_undefined {
+  background: transparent;
+}
+
+.bg-media-image-container>btn-group {
+  position: absolute;
+  top: 5px;
+  left: 400px;
+}
+
+/*# sourceMappingURL=report.css.map */
+
+pre {
+  margin-bottom: 0 !important;
+}
+
+
+#img-tools{
+  margin: -10px;
+  left:300px !important;
+}
+

@@ -1,0 +1,23 @@
+{
+  "name": "extension",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "aviramroi <aviram7168@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/extension.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@nestjs/mongoose": "^9.0.2",
+    "mongoose": "^6.1.3"
+  }
+}

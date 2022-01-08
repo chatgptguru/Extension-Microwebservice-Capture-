@@ -1,0 +1,82 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "pashoot",
+  "description": "Report bugs with technical logs, screencasts and screenshots and post directly to your favorite project management tool.",
+  "version": "2.0.0",
+  "homepage_url": "https://pashoot.re-invented.xyz/",
+  "default_locale": "en",
+  "web_accessible_resources": ["html/camera.html","html/sources.html","html/settings.html","js/content.js","css/content.css","assets/images/*","js/sources.js", "js/cameracontent.js", "css/cameracontent.css", "js/audiosources.js", "html/audiosources.html", "report.html"
+    ],
+  "icons": {
+    "16": "assets/icon_16.png",
+    "32": "assets/icon_32.png",
+    "48": "assets/icon_48.png",
+    "128": "assets/icon_128.png"
+  },
+  "background": {
+    "scripts": [
+      "assets/libs/ts-embl.js",
+      "background.js",
+      "assets/libs/hot-reload.js"
+    ],
+    "persistent": true 
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "extract_content.js",
+        "js/detect.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Pashoot",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "cookies",
+    "*://*/*",
+    "background",
+    "tabCapture",
+    "tabs"
+  ],
+  "commands": {
+        "cancel": {
+            "suggested_key": {
+              "default": "Alt+C",
+              "mac": "Alt+C"
+            },
+            "description": "__MSG_extCancel__"
+        },
+        "mute/unmute": {
+            "suggested_key": {
+              "default": "Alt+M",
+              "mac": "Alt+M"
+            },
+            "description": "__MSG_extMute__"
+        },
+        "stop": {
+            "suggested_key": {
+              "default": "Alt+S",
+              "mac": "Alt+S"
+            },
+            "description": "__MSG_extStop__"
+        },
+        "pause/resume": {
+            "suggested_key": {
+              "default": "Alt+P",
+              "mac": "Alt+P"
+            },
+            "description": "__MSG_extPause__"
+        }
+
+    },
+  "content_security_policy": "script-src 'self' https://sdk.amazonaws.com; object-src 'self'"
+}
